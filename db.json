@@ -1,0 +1,10 @@
+{
+  "payments": [],
+  "lists": {
+    "companies": ["Compañía A", "Compañía B"],
+    "bancos": ["Banco A", "Banco B"],
+    "jornadas": ["Diurna", "Nocturna", "Mixta"],
+    "categorias": ["Servicios", "Logística", "Tecnología"],
+    "subdivisiones": ["Subdivisión I", "Subdivisión II"]
+  }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista General</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Vista General</h1>
+    <div class="header-buttons">
+      <button class="nav-btn" onclick="window.location.href='index.html'">Registrar Pago</button>
+      <button class="nav-btn" onclick="window.location.href='visualizacion.html'">Visualizar Registros</button>
+      <button class="nav-btn" onclick="window.location.href='general.html'">Listado General</button>
+      <button class="nav-btn" onclick="window.location.href='listas.html'">Administrar Listas</button>
+    </div>
+  </header>
+
+  <form id="form-filtrar" class="form-grid">
+    <div class="form-group">
+      <label for="filter-compania">Compañía:</label>
+      <select id="filter-compania">
+        <option value="">Todas</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="filter-fecha-desde">Fecha Desde:</label>
+      <input type="date" id="filter-fecha-desde">
+    </div>
+    <div class="form-group">
+      <label for="filter-fecha-hasta">Fecha Hasta:</label>
+      <input type="date" id="filter-fecha-hasta">
+    </div>
+    <div class="form-group">
+      <label for="filter-jornada">Jornada:</label>
+      <select id="filter-jornada">
+        <option value="">Todas</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="filter-categoria">Categoría:</label>
+      <select id="filter-categoria">
+        <option value="">Todas</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="filter-subdivision">Subdivisión:</label>
+      <select id="filter-subdivision">
+        <option value="">Todas</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="filter-banco">Banco:</label>
+      <select id="filter-banco">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="filter-registro-contable">Registro Contable:</label>
+      <select id="filter-registro-contable">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Filtrar</button>
+    </div>
+  </form>
+
+  <table id="tabla-general" class="table">
+    <thead>
+      <tr>
+        <th><input type="checkbox" id="select-all"> Seleccionar todos</th>
+        <th>ID</th>
+        <th>Compañía</th>
+        <th>Fecha</th>
+        <th>Jornada</th>
+        <th>Categoría</th>
+        <th>Subdivisión</th>
+        <th>Valor</th>
+        <th>Banco</th>
+        <th>Registro Contable</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí se cargarán dinámicamente los registros -->
+    </tbody>
+  </table>
+
+  <!-- Botón para eliminar registros seleccionados -->
+  <div class="form-actions">
+    <button id="btn-eliminar-seleccionados" class="btn btn-danger">Eliminar Seleccionados</button>
+  </div>
+
+  <div id="modal-edit" style="display: none;">
+    <form id="form-editar-registro">
+      <input type="hidden" id="edit-id">
+      <div class="form-group">
+        <label for="edit-compania">Compañía:</label>
+        <input type="text" id="edit-compania">
+      </div>
+      <div class="form-group">
+        <label for="edit-fecha">Fecha:</label>
+        <input type="date" id="edit-fecha">
+      </div>
+      <div class="form-group">
+        <label for="edit-jornada">Jornada:</label>
+        <input type="text" id="edit-jornada">
+      </div>
+      <div class="form-group">
+        <label for="edit-categoria">Categoría:</label>
+        <input type="text" id="edit-categoria">
+      </div>
+      <div class="form-group">
+        <label for="edit-subdivision">Subdivisión:</label>
+        <input type="text" id="edit-subdivision">
+      </div>
+      <div class="form-group">
+        <label for="edit-valor">Valor:</label>
+        <input type="number" id="edit-valor">
+      </div>
+      <div class="form-group">
+        <label for="edit-banco">Banco:</label>
+        <input type="text" id="edit-banco">
+      </div>
+      <div class="form-group">
+        <label for="edit-registro-contable">Registro Contable:</label>
+        <input type="text" id="edit-registro-contable">
+      </div>
+      <button type="submit">Guardar Cambios</button>
+      <button type="button" id="modal-close" onclick="document.querySelector('#modal-edit').style.display='none'">Cancelar</button>
+    </form>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

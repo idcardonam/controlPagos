@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Pago</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Registrar Pago</h1>
+    <nav>
+      <button class="nav-btn" onclick="window.location.href='index.html'">Registrar Pago</button>
+      <button class="nav-btn" onclick="window.location.href='visualizacion.html'">Visualizar Registros</button>
+      <button class="nav-btn" onclick="window.location.href='general.html'">Listado General</button>
+      <button class="nav-btn" onclick="window.location.href='listas.html'">Administrar Listas</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="registrar-pago">
+      <h2>Registrar Pago</h2>
+      <form id="form-registrar-pago" class="form-grid">
+        <div class="form-group">
+          <label for="select-compania">Compañía:</label>
+          <select id="select-compania">
+            <option value="">--Seleccione--</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="select-jornada">Jornada:</label>
+          <select id="select-jornada">
+            <option value="">--Seleccione--</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="select-categoria">Categoría:</label>
+          <select id="select-categoria">
+            <option value="">--Seleccione--</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="select-banco">Banco:</label>
+          <select id="select-banco">
+            <option value="">--Seleccione--</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="select-subdivision">Subdivisión:</label>
+          <select id="select-subdivision">
+            <option value="">--Seleccione--</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="input-fecha">Fecha:</label>
+          <input type="date" id="input-fecha">
+        </div>
+        <div class="form-group">
+          <label for="input-valor">Valor:</label>
+          <input type="number" id="input-valor" step="0.01">
+        </div>
+        <button type="submit">Registrar Pago</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

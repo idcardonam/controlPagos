@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualización de Registros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Visualización de Registros</h1>
+    <nav>
+      <button class="nav-btn" onclick="window.location.href='index.html'">Registrar Pago</button>
+      <button class="nav-btn" onclick="window.location.href='visualizacion.html'">Visualizar Registros</button>
+      <button class="nav-btn" onclick="window.location.href='general.html'">Listado General</button>
+      <button class="nav-btn" onclick="window.location.href='listas.html'">Administrar Listas</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección de filtros -->
+    <section id="filtros">
+      <form id="form-filtrar">
+        <div class="filter-container">
+          <div class="filter-group">
+            <label for="filter-compania">Compañía:</label>
+            <select id="filter-compania">
+              <option value="">--Seleccione--</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-jornada">Jornada:</label>
+            <select id="filter-jornada">
+              <option value="">--Seleccione--</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-categoria">Categoría:</label>
+            <select id="filter-categoria">
+              <option value="">--Seleccione--</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-banco">Banco:</label>
+            <select id="filter-banco">
+              <option value="">--Seleccione--</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-actions">
+          <button type="submit" id="btn-filtrar">Filtrar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Sección de resultados -->
+    <section id="resultados">
+      <h2>Registros</h2>
+      <table id="tabla-registros">
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="select-all"> Seleccionar todos</th>
+            <th>Compañía</th>
+            <th>Fecha</th>
+            <th>Jornada</th>
+            <th>Categoría</th>
+            <th>Subdivisión</th>
+            <th>Valor</th>
+            <th>Banco</th>
+            <th>Registro Contable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se cargarán dinámicamente los registros -->
+        </tbody>
+      </table>
+      <button id="btn-asignar-contable">Asignar Número Contable</button>
+    </section>
+  </main>
+
+  <!-- Carga del script principal -->
+  <script src="main.js" defer></script>
+</body>
+</html>
+

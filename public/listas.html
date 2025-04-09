@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PayTrack - Configuración de Listas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Administrar Listas</h1>
+    <div class="header-buttons">
+      <button class="nav-btn" onclick="window.location.href='index.html'">Registrar Pago</button>
+      <button class="nav-btn" onclick="window.location.href='visualizacion.html'">Visualizar Registros</button>
+      <button class="nav-btn" onclick="window.location.href='general.html'">Listado General</button>
+      <button class="nav-btn" onclick="window.location.href='listas.html'">Administrar Listas</button>
+    </div>
+  </header>
+  <main>
+    <section id="listas-config" class="form-grid">
+      <!-- Sección para Compañías -->
+      <div class="lista-section">
+        <h2>Compañías</h2>
+        <form data-field="companies" class="form-lista">
+          <input type="text" placeholder="Nueva compañía" required>
+          <button type="submit">Agregar</button>
+        </form>
+        <div class="lista-items" id="items-companies">
+          <!-- Aquí se cargarán dinámicamente -->
+        </div>
+      </div>
+
+      <!-- Sección para Bancos -->
+      <div class="lista-section">
+        <h2>Bancos</h2>
+        <form data-field="bancos" class="form-lista">
+          <input type="text" placeholder="Nuevo banco" required>
+          <button type="submit">Agregar</button>
+        </form>
+        <div class="lista-items" id="items-bancos">
+          <!-- Aquí se cargarán dinámicamente -->
+        </div>
+      </div>
+
+      <!-- Sección para Jornadas -->
+      <div class="lista-section">
+        <h2>Jornadas</h2>
+        <form data-field="jornadas" class="form-lista">
+          <input type="text" placeholder="Nueva jornada" required>
+          <button type="submit">Agregar</button>
+        </form>
+        <div class="lista-items" id="items-jornadas">
+          <!-- Aquí se cargarán dinámicamente -->
+        </div>
+      </div>
+
+      <!-- Sección para Categorías -->
+      <div class="lista-section">
+        <h2>Categorías</h2>
+        <form data-field="categorias" class="form-lista">
+          <input type="text" placeholder="Nueva categoría" required>
+          <button type="submit">Agregar</button>
+        </form>
+        <div class="lista-items" id="items-categorias">
+          <!-- Aquí se cargarán dinámicamente -->
+        </div>
+      </div>
+    </section>
+
+    <table id="tabla-listas" class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se cargarán dinámicamente las listas -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Modal para Confirmar Eliminación -->
+  <div id="modal-confirm-delete" style="display: none;">
+    <div class="modal-content">
+      <p>¿Estás seguro de que deseas eliminar este elemento?</p>
+      <button id="btn-confirm-delete">Sí, eliminar</button>
+      <button id="btn-cancel-delete" onclick="document.getElementById('modal-confirm-delete').style.display='none'">Cancelar</button>
+    </div>
+  </div>
+  <script src="main.js" defer></script>
+</body>
+</html>
